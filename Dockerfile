@@ -1,4 +1,7 @@
-FROM richarvey/nginx-php-fpm:1.9.1
+RUN docker pull richarvey/nginx-php-fpm:latest
+RUN sudo docker run -d richarvey/nginx-php-fpm
+
+FROM richarvey/nginx-php-fpm:2.2.0
 
 COPY . .
 

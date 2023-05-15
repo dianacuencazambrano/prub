@@ -56,16 +56,16 @@ class ApiController extends Controller
     }
 
     public function getCentrosCostos(){
-        try {
+        //try {
             $apiURL = getenv('API_SERVICIOS');
             $url = $apiURL . '/api/Varios/CentroCostosSelect';
 
             $response = Http::get($url);
             return $response;
             //return response()->json(['success' => 1, 'message' => $response[0]], 200);
-        } catch (\Throwable $th) {
-            return response()->json(['success' => 0, 'message' => 'Error'], 201);
-        }
+        // } catch (\Throwable $th) {
+        //     return response()->json(['success' => 0, 'message' => 'Error'], 201);
+        // }
     }
     public function insertCentrosCostos(Request $request){
         try {
